@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES += \
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
