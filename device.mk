@@ -5,6 +5,9 @@
 
 DEVICE_PATH := device/samsung/m55xq
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
