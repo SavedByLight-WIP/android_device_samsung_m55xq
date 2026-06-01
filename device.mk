@@ -7,6 +7,10 @@ DEVICE_PATH := device/samsung/m55xq
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom
