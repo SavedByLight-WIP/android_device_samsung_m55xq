@@ -4,7 +4,7 @@
 #
 
 DEVICE_PATH := device/samsung/m55xq
-PREBUILT_PATH := device/xiaomi/m55xq-kernel
+PREBUILT_PATH := device/samsung/m55xq-kernel
 
 # Build Hacks
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
