@@ -5,6 +5,9 @@
 
 DEVICE_PATH := device/samsung/m55xq
 
+# Build Hacks
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a-branchprot
@@ -21,6 +24,32 @@ TARGET_2ND_CPU_VARIANT := cortex-a75
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := m55xq
 TARGET_NO_BOOTLOADER := true
+
+# Boot Image
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+# Device Trees
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+TARGET_NEEDS_DTBOIMAGE := true
+
+# Kernel
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_IMAGE_NAME := Image
+
+BOARD_KERNEL_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    loop.max_part=7 
+
+BOARD_BOOTCONFIG := \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3 
+
+BOARD_BOOTCONFIG += \
+    androidboot.selinux=permissive
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
