@@ -11,6 +11,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     fstab.qcom
 
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 

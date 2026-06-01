@@ -110,5 +110,15 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := taro
 
+# Recovery
+BOARD_HAS_DOWNLOAD_MODE := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2
+BOARD_RECOVERY_MKBOOTIMG_ARGS += --dtb $(PREBUILT_PATH)/images/dtb.img
+TARGET_USES_MKE2FS := true
+BOARD_USES_FULL_RECOVERY_IMAGE := true
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/etc/fstab.qcom
+
 # Inherit the proprietary files
 include vendor/samsung/m55xq/BoardConfigVendor.mk
