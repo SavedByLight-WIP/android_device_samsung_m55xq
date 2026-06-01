@@ -7,6 +7,7 @@ DEVICE_PATH := device/samsung/m55xq
 PREBUILT_PATH := device/samsung/m55xq-kernel
 
 # Build Hacks
+BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
