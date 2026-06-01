@@ -5,6 +5,8 @@
 
 DEVICE_PATH := device/samsung/m55xq
 
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
