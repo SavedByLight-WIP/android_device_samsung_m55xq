@@ -22,7 +22,41 @@ PRODUCT_PACKAGES += \
     fstab.qcom
 
 PRODUCT_PACKAGES += \
-    init.qcom.recovery.rc
+    init.class_main.sh \
+    init.crda.sh \
+    init.kernel.post_boot-cape.sh \
+    init.kernel.post_boot-diwali.sh \
+    init.kernel.post_boot-taro.sh \
+    init.kernel.post_boot.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    init.qti.kernel.sh \
+    init.qti.media.sh \
+    init.qti.qcv.sh \
+    init.qti.touch_boot.sh \
+    init.qti.write.sh \
+    install-recovery.sh \
+    qca6234-service.sh \
+    vendor_modprobe.sh
+
+PRODUCT_PACKAGES += \
+    init.qcom.recovery.rc \
+    init.m55xq.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.qti.kernel.rc \
+    init.qti.ufs.rc \
+    init.samsung.bsp.rc \
+    init.samsung.rc \
+    init.target.rc \
+    init.x55.rc 
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
