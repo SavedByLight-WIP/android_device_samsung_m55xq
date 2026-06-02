@@ -40,6 +40,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_qca6750_WCNSS_qcom_cfg.ini_symlink \
+    firmware_wlan_WCNSS_qcom_cfg.ini_symlink
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
