@@ -123,6 +123,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/etc/fstab.qcom
 
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm7450
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
+
 # HIDL manifests
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
